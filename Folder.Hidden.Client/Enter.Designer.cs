@@ -1,6 +1,6 @@
 ﻿namespace Folder.Hidden.Client
 {
-    partial class Login
+    partial class Enter
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.textBoxPlaceholder1 = new Folder.Hidden.Controls.TextBoxPlaceholder();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtPlaceholderPassword = new Folder.Hidden.Controls.TextBoxPlaceholder();
+            this.btnEnter = new System.Windows.Forms.Button();
             this.linkForgetPassword = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
@@ -44,24 +44,25 @@
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Welcome";
             // 
-            // textBoxPlaceholder1
+            // txtPlaceholderPassword
             // 
-            this.textBoxPlaceholder1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPlaceholder1.Location = new System.Drawing.Point(59, 89);
-            this.textBoxPlaceholder1.Name = "textBoxPlaceholder1";
-            this.textBoxPlaceholder1.PlaceholderText = "Password";
-            this.textBoxPlaceholder1.Size = new System.Drawing.Size(165, 20);
-            this.textBoxPlaceholder1.TabIndex = 2;
+            this.txtPlaceholderPassword.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaceholderPassword.Location = new System.Drawing.Point(59, 89);
+            this.txtPlaceholderPassword.Name = "txtPlaceholderPassword";
+            this.txtPlaceholderPassword.PlaceholderText = "Password";
+            this.txtPlaceholderPassword.Size = new System.Drawing.Size(165, 20);
+            this.txtPlaceholderPassword.TabIndex = 2;
             // 
-            // button1
+            // btnEnter
             // 
-            this.button1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(59, 115);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Enter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEnter.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnter.Location = new System.Drawing.Point(59, 115);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(165, 23);
+            this.btnEnter.TabIndex = 3;
+            this.btnEnter.Text = "Enter";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.Enter_Click);
             // 
             // linkForgetPassword
             // 
@@ -73,19 +74,20 @@
             this.linkForgetPassword.TabIndex = 4;
             this.linkForgetPassword.TabStop = true;
             this.linkForgetPassword.Text = "I Forget My Password";
+            this.linkForgetPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgetPassword_LinkClicked);
             // 
-            // Login
+            // Enter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 261);
             this.Controls.Add(this.linkForgetPassword);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBoxPlaceholder1);
+            this.Controls.Add(this.btnEnter);
+            this.Controls.Add(this.txtPlaceholderPassword);
             this.Controls.Add(this.lblWelcome);
             this.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
-            this.Name = "Login";
+            this.Name = "Enter";
             this.Text = "Enter your password";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -94,8 +96,8 @@
 
         #endregion
         private System.Windows.Forms.Label lblWelcome;
-        private Controls.TextBoxPlaceholder textBoxPlaceholder1;
-        private System.Windows.Forms.Button button1;
+        private Controls.TextBoxPlaceholder txtPlaceholderPassword;
+        private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.LinkLabel linkForgetPassword;
     }
 }
